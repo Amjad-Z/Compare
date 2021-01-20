@@ -30,7 +30,7 @@ $conn = mysqli_connect('localhost' , 'Amjad' , 'Amjad123', 'Player') or die (mys
   //function compare(){
   $name1 = $_GET['player1'];
   $a = "%$name1%";
-  $result1 = mysqli_query($conn , "SELECT * FROM player_table WHERE name LIKE '$a'");
+  $result1 = mysqli_query($conn , "SELECT * FROM player WHERE name LIKE '$a'");
   $rows1 = mysqli_num_rows($result1);
   while ($row = mysqli_fetch_assoc($result1)){
       $p1id =  $row['pid'];
@@ -46,7 +46,7 @@ $conn = mysqli_connect('localhost' , 'Amjad' , 'Amjad123', 'Player') or die (mys
 
     $name2 = $_GET['player2'];
     $b = "%$name2%";
-    $result2 = mysqli_query($conn , "SELECT * FROM player_table WHERE name LIKE '$b'");
+    $result2 = mysqli_query($conn , "SELECT * FROM player WHERE name LIKE '$b'");
     $rows2 = mysqli_num_rows($result2);
     while ($row = mysqli_fetch_assoc($result2)){
       $p2id =  $row['pid'];
